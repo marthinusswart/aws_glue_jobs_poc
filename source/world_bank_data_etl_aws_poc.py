@@ -26,7 +26,7 @@ RemovePriorto1990_node1708238527332 = ApplyMapping.apply(frame=AWSGlueDataCatalo
 #RemovePriorto1990_node1708238527332.toDF().show()
 
 # Script generated for node Amazon S3
-AmazonS3_node1708238624148 = glueContext.write_dynamic_frame.from_options(frame=RemovePriorto1990_node1708238527332, connection_type="s3", format="parquet", connection_options={"path": "s3://poc-world-bank-data/GC.DOD.TOTL.GD.ZS/", "partitionKeys": []}, format_options={"compression": "uncompressed"})
+AmazonS3_node1708238624148 = glueContext.write_dynamic_frame.from_options(frame=RemovePriorto1990_node1708238527332, connection_type="s3", format="parquet", connection_options={"path": "s3://poc-world-bank-data/GC.DOD.TOTL.GD.ZS_python_poc/", "partitionKeys": []}, format_options={"compression": "uncompressed"})
 
 #print ("Completed the import")
 job.commit()
